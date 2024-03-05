@@ -1,12 +1,26 @@
-# [Capstone Project](https://github.com/ianhaggerty/finalCapstone/tree/master) — NLP Applications
+# [Capstone Project](https://github.com/ianhaggerty/finalCapstone/tree/master) — [NLP Applications](https://medium.com/@mohamadhasan.sarvandani/top-applications-of-nlp-54834ca9c8ca)
 
-## [CoGrammar](https://skills.cogrammar.com/) / [HyperionDev](https://www.hyperiondev.com/)
+## [CoGrammar](https://skills.cogrammar.com/) / [HyperionDev](https://www.hyperiondev.com/) / [Portfolio](https://www.hyperiondev.com/portfolio/IH23120012475/)
 
-### [Portfolio](https://www.hyperiondev.com/portfolio/IH23120012475/)
+## Introduction
 
-## _Introduction_
+This repository entails the final capstone project in the _HyperionDev Data Science (Fundamentals)_ course. The main script can be found [here](https://github.com/ianhaggerty/finalCapstone/blob/master/sentiment_analysis.py) and corresponding
+notebook [here](https://github.com/ianhaggerty/finalCapstone/blob/master/notebooks/sentiment_analysis.ipynb).
 
-## _Usage_
+The objective of this project was to discover interesting and actionable insights within a dataset of [amazon reviews](https://www.kaggle.com/datasets/datafiniti/consumer-reviews-of-amazon-products).
+
+[spaCy](https://spacy.io/usage) was used to conduct NLP analysis, in conjunction with
+[TextBlob](https://textblob.readthedocs.io/en/dev/) to determine the sentiment and subjectivity.
+
+Please see the [project requirements](https://github.com/ianhaggerty/finalCapstone/blob/master/reports/project_desc.pdf) and corresponding [report](https://github.com/ianhaggerty/finalCapstone/blob/master/reports/sentiment_analysis_report.pdf).
+
+## Images
+
+![Most dissimilar reviews.](images/dissimilar.png)
+![Most similar reviews.](images/similar.png)
+![Review similarity matrix.](images/matrix.png)
+
+## Usage
 
 1.  Setup the virtual environment.
 
@@ -41,3 +55,7 @@
    ```bash
    jupyter nbconvert --execute --to notebook --inplace notebooks/sentiment_analysis.ipynb
    ```
+
+## A Note from the Author
+
+Thanks for your interest! Please see my [GitHub profile](https://github.com/ianhaggerty) or [Linkedin](https://www.linkedin.com/in/ihaggerty/) to stay updated.
