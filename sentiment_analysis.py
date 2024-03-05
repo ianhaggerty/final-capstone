@@ -90,7 +90,7 @@ from collections import namedtuple
 from wordcloud import WordCloud
 
 # Internal.
-from lib.util import preprocess, sentiment_analysis, print_review
+from utils.nlp_helpers import preprocess, sentiment_analysis, print_review
 
 # Import CSV file and parse into a pandas dataframe.
 # NOTE It's tempting to use `id` column as the index here. However, this
@@ -98,10 +98,13 @@ from lib.util import preprocess, sentiment_analysis, print_review
 #      product reviews, so their `id` is not unique within this dataset.
 #      Moreover, the `reviews.id` is mostly NA, so instead, we use the
 #      default rangeindex here.
-reviews = pd.read_csv(Path(".", "data", "amazon_product_reviews.csv"))[0:10]
+reviews = pd.read_csv(Path(".", "datasets", "amazon_product_reviews.csv"))
 
 # Load the *small* spaCy NLP model.
 nlp = spacy.load("en_core_web_sm")
+
+# Arbitrary constants.
+SIM_MAT_DIM = 10 # similarity matrix dimension
 
 # Remove rows where the review is absent.
 # NOTE There doesn't appear to be any missing reviews for this dataset.
@@ -132,11 +135,10 @@ reviews["subjectivity"] = sentiments.map(lambda s: s.subjectivity)
 #      This took ~ 40 minutes on my machine, though GPU optimisation
 #      might be available. https://tqdm.github.io/
 #      https://stackoverflow.com/a/75355418/1030067
-similarity_dim = 10
-similarity_df = pd.DataFrame(np.empty((similarity_dim, similarity_dim)))
-for i in range(0, similarity_dim):
+similarity_df = pd.DataFrame(np.empty((SIM_MAT_DIM, SIM_MAT_DIM)))
+for i in range(0, SIM_MAT_DIM):
     similarity_df.iloc[i,i] = 1
-    for j in range(i + 1, similarity_dim):
+    for j in range(i + 1, SIM_MAT_DIM):
         similarity = review_docs.iloc[i].similarity(review_docs.iloc[j])
         similarity_df.iloc[i, j] = similarity
         similarity_df.iloc[j, i] = similarity
@@ -147,8 +149,8 @@ max = 0
 min = 1
 Indices = namedtuple("Indices", ["min", "max"])
 
-for i in range(0, similarity_dim):
-    for j in range(i + 1, similarity_dim):
+for i in range(0, SIM_MAT_DIM):
+    for j in range(i + 1, SIM_MAT_DIM):
         if (similarity_df.iloc[i,j]) < min:
             min = similarity_df.iloc[i,j]
             index_min = (i,j)
