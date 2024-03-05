@@ -58,4 +58,8 @@ Please see the [project requirements](https://github.com/ianhaggerty/finalCapsto
 
 ## A Note from the Author
 
+<<<<<<< HEAD
 Thanks for your interest! Please see my [GitHub profile](https://github.com/ianhaggerty) or [Linkedin](https://www.linkedin.com/in/ihaggerty/) to stay updated.
+=======
+Thanks for your interest! Please see my [GitHub](https://github.com/ianhaggerty) or [Linkedin](https://www.linkedin.com/in/ihaggerty/) to stay updated.
+>>>>>>> 699c0a6 (Updated readme. Added images.)
