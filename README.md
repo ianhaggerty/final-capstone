@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This repository entails the final capstone project in the _HyperionDev Data Science (Fundamentals)_ course. The main script can be found [here](https://github.com/ianhaggerty/finalCapstone/blob/master/sentiment_analysis.py) and corresponding
+This repository represents the final capstone project in my _HyperionDev Data Science (Fundamentals)_ course. The main script can be found [here](https://github.com/ianhaggerty/finalCapstone/blob/master/sentiment_analysis.py) and corresponding
 notebook [here](https://github.com/ianhaggerty/finalCapstone/blob/master/notebooks/sentiment_analysis.ipynb).
 
 The objective of this project was to discover interesting and actionable insights within a dataset of [amazon reviews](https://www.kaggle.com/datasets/datafiniti/consumer-reviews-of-amazon-products).
@@ -13,6 +13,8 @@ The objective of this project was to discover interesting and actionable insight
 [TextBlob](https://textblob.readthedocs.io/en/dev/) to determine the sentiment and subjectivity.
 
 Please see the [project requirements](https://github.com/ianhaggerty/finalCapstone/blob/master/reports/project_desc.pdf) and corresponding [report](https://github.com/ianhaggerty/finalCapstone/blob/master/reports/sentiment_analysis_report.pdf).
+
+My official "grading" can be found [here](https://hyperiondev.cogrammar.com/review/acab9271caa0636a51999e66651876b5c291f15c631ac3141e313abae0620aa8/).
 
 ## Images
 
