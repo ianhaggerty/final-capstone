@@ -14,7 +14,7 @@ The objective of this project was to discover interesting and actionable insight
 
 Please see the [project requirements](https://github.com/ianhaggerty/finalCapstone/blob/master/reports/project_desc.pdf) and corresponding [report](https://github.com/ianhaggerty/finalCapstone/blob/master/reports/sentiment_analysis_report.pdf).
 
-My grading, by Kenneth Mlimi, can be found [here](https://hyperiondev.cogrammar.com/review/acab9271caa0636a51999e66651876b5c291f15c631ac3141e313abae0620aa8/).
+Offical grading, generously provided by Kenneth Mlimi, can be found [here](https://hyperiondev.cogrammar.com/review/acab9271caa0636a51999e66651876b5c291f15c631ac3141e313abae0620aa8/).
 
 ## Images
 
